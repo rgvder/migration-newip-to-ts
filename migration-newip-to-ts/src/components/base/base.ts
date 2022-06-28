@@ -8,7 +8,7 @@ export interface Config<T> {
     options?: Options;
 }
 
-interface SourcesItem {
+export interface SourcesItem {
     category: string;
     country: string;
     description: string;
@@ -28,7 +28,7 @@ interface ArticleSource {
     name: string;
 }
 
-interface ArticleItem {
+export interface ArticleItem {
     author: string;
     content: string;
     description: string;
