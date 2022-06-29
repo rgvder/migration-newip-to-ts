@@ -45,4 +45,9 @@ export interface ArticleData {
     articles: ArticleItem[];
 }
 
+export enum Endpoints {
+    Sources = 'sources',
+    Everything = 'everything',
+}
+
 export type Method = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'CONNECT' | 'OPTIONS' | 'TRACE' | 'PATCH';
