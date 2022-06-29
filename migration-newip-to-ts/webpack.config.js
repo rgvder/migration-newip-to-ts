@@ -17,13 +17,24 @@ const baseConfig = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.(png|jpg|svg|gif)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/[name][ext]',
+                },
+            },
+            {
+                test: /\.(html)$/,
+                use: 'html-loader',
+            }
         ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
     output: {
-        filename: 'index.ts',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
