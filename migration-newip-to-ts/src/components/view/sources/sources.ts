@@ -1,21 +1,23 @@
 import './sources.css';
-import { SourcesItem } from "../../base/base";
+import { Nullable, SourcesItem } from "../../base/base";
+import { setElementParam } from "../../base/functions";
 
 class Sources {
     draw(data: SourcesItem[]) {
         const fragment: DocumentFragment = document.createDocumentFragment();
-        const sourceItemTemp: HTMLTemplateElement = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
+        const sourceItemTemp: Nullable<HTMLTemplateElement> = document.querySelector<HTMLTemplateElement>('#sourceItemTemp');
 
         data.forEach((item: SourcesItem) => {
-            const sourceClone: HTMLTemplateElement = sourceItemTemp.content.cloneNode(true) as HTMLTemplateElement;
+            const sourceClone: Nullable<HTMLTemplateElement> = sourceItemTemp?.content?.cloneNode(true) as HTMLTemplateElement;
 
-            (sourceClone.querySelector('.source__item-name') as HTMLElement).textContent = item.name;
-            sourceClone.querySelector('.source__item')?.setAttribute('data-source-id', item.id);
+            setElementParam('.source__item-name', 'textContent', item.name, sourceClone);
+
+            sourceClone.querySelector<HTMLElement>('.source__item')?.setAttribute('data-source-id', item.id);
 
             fragment.append(sourceClone);
         });
 
-        document.querySelector('.sources')?.append(fragment);
+        document.querySelector<HTMLElement>('.sources')?.append(fragment);
     }
 }
 

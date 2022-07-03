@@ -50,4 +50,6 @@ export enum Endpoints {
     Everything = 'everything',
 }
 
+export type Nullable<T> = T | null;
+
 export type Method = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'CONNECT' | 'OPTIONS' | 'TRACE' | 'PATCH';
