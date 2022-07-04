@@ -22,12 +22,6 @@ html {
     padding: 0 30px;
 }
 
-/*@media (max-width: 1919px) {*/
-/*    .wrapper {*/
-/*        width: 1500px;*/
-/*    }*/
-/*}*/
-
 header {
     flex: 0 0 auto;
     padding-top: 30px;
