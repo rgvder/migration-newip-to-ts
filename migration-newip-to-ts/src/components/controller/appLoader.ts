@@ -3,7 +3,7 @@ import Loader from "./loader";
 class AppLoader extends Loader {
   constructor() {
     super("https://nodenews.herokuapp.com/", {
-      apiKey: "bfb5542550f045ee9fe9116a8af214dd"
+      apiKey: "0b2d4cbb26b240c0bf5eb6c3df4da6ca"
     });
   }
 }
