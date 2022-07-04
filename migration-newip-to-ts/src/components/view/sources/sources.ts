@@ -3,7 +3,7 @@ import { Nullable, SourcesItem } from "../../base/base";
 import { setElementParam } from "../../base/functions";
 
 class Sources {
-    draw(data: SourcesItem[]) {
+    public draw(data: SourcesItem[]) {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const sourceItemTemp: Nullable<HTMLTemplateElement> = document.querySelector<HTMLTemplateElement>('#sourceItemTemp');
 
@@ -17,7 +17,9 @@ class Sources {
             fragment.append(sourceClone);
         });
 
-        document.querySelector<HTMLElement>('.sources')?.append(fragment);
+        setElementParam('.sources__wrapper', 'innerHTML', '');
+
+        document.querySelector<HTMLElement>('.sources__wrapper')?.append(fragment);
     }
 }
 
