@@ -33,7 +33,7 @@ class App {
 
     document
       ?.querySelector<HTMLElement>(".filter__button")
-      ?.addEventListener('click', () => this.view.drawSources(this.controller.sources));
+      ?.addEventListener("click", () => this.view.drawSources(this.controller.sources));
   }
 }
 

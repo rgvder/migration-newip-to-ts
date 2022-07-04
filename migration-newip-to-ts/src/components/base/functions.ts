@@ -2,7 +2,7 @@ import { Nullable } from "./base";
 
 export function setElementParam(
   selector: string,
-  param: 'innerHTML' | 'textContent',
+  param: "innerHTML" | "textContent",
   value: string,
   parent: HTMLElement = document.body
 ): void {
