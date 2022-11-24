@@ -23,6 +23,11 @@
   cursor: pointer;
 }
 
+.filter__button {
+  padding-bottom: 1.1em;
+  padding-top: 1.1em;
+}
+
 .source__item:hover,
 .source__item:focus,
 .filter__input:focus,
